@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(31, 30, 51);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    color: #ffff;
+}
+
+h1 {
+    margin-bottom: 3vh;
+}
+
+.movie-container {
+    color: rgb(165, 178, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-container select {
+    margin-left: 1vw;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    text-align: center;
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    padding: 2px 5px;
+}
+
+.movie-container select:focus {
+    outline: none;
+}
+
+
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.details li {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 1vw;
+}
+
+.details small {
+    margin-left: 3px;
+}
+
+.box {
+    margin: 5vh 0;
+    perspective: 1000px;
+}
+
+
+.screen {
+    height: 15vh;
+    width: 100%;
+    margin: 2vh 0;
+    background-color: #ffff;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 4px 3px rgb(129, 131, 97);
+}
+
+.seat {
+    height: 11px;
+    width: 10px;
+    margin: 2px;
+    background-color: rgb(94, 94, 98);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.row {
+    padding: 0 3px;
+    /* background-color: rgb(184, 192, 199); */
+    display: flex;
+}
+
+.seat:nth-child(5) {
+    margin-left: 1vw;
+}
+
+.seat:nth-last-child(5) {
+    margin-right: 1vw;
+}
+
+.row.space {
+    padding-top: 1vh;
+}
+
+.seat.occupied {
+    background-color: rgb(194, 55, 42);
+}
+
+.seat.selected {
+    /* background-color: rgb(28, 192, 192); */
+    background-color: rgb(255, 255, 255);
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.details .seat:hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.information span {
+    color: rgb(28, 192, 192);
+}
