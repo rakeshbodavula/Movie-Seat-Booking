@@ -3,7 +3,7 @@ $(document).ready(function(){
     let cost = $('#movie').value
     
     function updateCount(){
-        let count = $('.row .seat.selected')
+        let count = $('.roww .seat.selected')
         let seatsCount = count.length
         $('.count').html(seatsCount)
         $('.cost').html(seatsCount*cost)
