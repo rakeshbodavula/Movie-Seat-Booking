@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     const seats = $('.seat')
     let cost = $('#movie').value
